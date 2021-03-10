@@ -1,6 +1,6 @@
 # Radix Rotuer Deno
 
-> A very simple radix tree and rotuer based on radix/patrica trees made for deno
+> A very simple [radix tree](radix_trees) and rotuer based on [radix/patrica trees](radix_trees) made for deno
 
 Please note that performance hasn't actually been tested.
 
@@ -44,3 +44,5 @@ for await (const req of server) {
   }
 }
 ```
+
+[radix_trees]: (https://wikipedia.org/wiki/Radix_tree)
