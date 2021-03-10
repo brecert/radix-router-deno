@@ -1,4 +1,4 @@
-import { Node, RadixTrie } from "./radix_tree.ts";
+import { Node, RadixTree } from "./radix_tree.ts";
 
 export class DataNode<T> extends Node {
   static bind<T>(data: T) {
@@ -9,7 +9,7 @@ export class DataNode<T> extends Node {
   }
 }
 
-export class Router<T> extends RadixTrie {
+export class Router<T> extends RadixTree {
   constructor(routes: Record<string, T>) {
     super();
 

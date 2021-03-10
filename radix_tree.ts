@@ -34,7 +34,7 @@ function replace<T>(arr: T[], item: T, ...items: T[]) {
   }
 }
 
-export class RadixTrie {
+export class RadixTree {
   rootNode = new Node([], false);
 
   lookup(x: string): LookupResult {

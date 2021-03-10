@@ -2,7 +2,7 @@ import {
   assert,
   assertEquals,
 } from "https://deno.land/std@0.89.0/testing/asserts.ts";
-import { Edge, Node, RadixTrie } from "./radix_tree.ts";
+import { Edge, Node, RadixTree } from "./radix_tree.ts";
 
 class DataNode<T> extends Node {
   static bind<T>(data: T) {
@@ -15,7 +15,7 @@ class DataNode<T> extends Node {
 }
 
 Deno.test("distinct insertions", () => {
-  const trie = new RadixTrie();
+  const trie = new RadixTree();
   trie.insert("test", DataNode.bind("test"));
   trie.insert("slow", DataNode.bind("slow"));
   trie.insert("water", DataNode.bind("water"));
@@ -37,7 +37,7 @@ Deno.test("distinct insertions", () => {
 });
 
 Deno.test("suffix insertion split", () => {
-  const trie = new RadixTrie();
+  const trie = new RadixTree();
   trie.insert("test", DataNode.bind("test"));
   trie.insert("slow", DataNode.bind("slow"));
   trie.insert("water", DataNode.bind("water"));
@@ -66,7 +66,7 @@ Deno.test("suffix insertion split", () => {
 });
 
 Deno.test("prefix insertion split", () => {
-  const trie = new RadixTrie();
+  const trie = new RadixTree();
   trie.insert("slower", DataNode.bind("slower"));
   trie.insert("water", DataNode.bind("water"));
   trie.insert("test", DataNode.bind("test"));
